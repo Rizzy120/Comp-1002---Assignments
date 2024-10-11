@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="This is the code of Lab 1 for a Pizza Website">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Pizza Website</title>
+    <link rel="stylesheet" href="./Main.css">
+
+
+</head>
+<body>
+    <header>
+        <!-- Logo -->
+        <div>
+            <a href="index.html">
+                <img src="./img/Pizzeria.png" alt="header logo">
+            </a>             
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#about" target="_self">About</a></li>
+                <li><a href="#menu" target="_self">Menu</a></li>
+                <li><a href="#contact" target="_self">Contact</a></li>
+                <li><a href="#order" target="_self">Order Now</a></li>
+            </ul>
+        </nav>
+    </header>   
+   
+    <main>
+        <!--  Image -->
+        <section class="banner-card">
+            <img src="./img/pizza.jpg" alt="Delicious pizza" class="hero-image">
+        </section>
+
+        <section id="create-your-own" style="display: flex;">
+
+            <div class="pizza-item create-your-own" style="flex: 1;">
+                <h3>Create Your Own</h3>
+                <!-- Order Form Integrated Here -->
+                <form action="submit_order.php" method="POST" onsubmit="confirmOrder(event)">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                
+                    <label for="pizzas">Number of Pizzas:</label>
+                    <input type="number" id="pizzas" name="pizzas" min="1" max="10" required>
+                    <p>Customize your pizza with your choice of toppings!</p>
+                    <p class="price">Starting at $10.00</p>
+                    <fieldset>
+                        <legend>Pizza Size:</legend>
+                        <label>
+                            <input type="radio" name="size" value="small" required> Small
+                        </label>
+                        <label>
+                            <input type="radio" name="size" value="medium"> Medium
+                        </label>
+                        <label>
+                            <input type="radio" name="size" value="large"> Large
+                        </label>
+                    </fieldset>
+                
+                    <fieldset>
+                        <legend>Toppings:</legend>
+                        <label>
+                            <input type="checkbox" name="toppings" value="halal_pepperoni"> Pepperoni
+                        </label>
+                        <label>
+                            <input type="checkbox" name="toppings" value="mushrooms"> Mushrooms
+                        </label>
+                        <label>
+                            <input type="checkbox" name="toppings" value="onions"> Onions
+                        </label>
+                        <label>
+                            <input type="checkbox" name="toppings" value="green_peppers"> Green Peppers
+                        </label>
+                        <label>
+                            <input type="checkbox" name="toppings" value="black_olives"> Black Olives
+                        </label>
+                        <label>
+                            <input type="checkbox" name="toppings" value="spinach"> Spinach
+                        </label>
+                        <label>
+                            <input type="checkbox" name="toppings" value="extra_cheese"> Extra Cheese
+                        </label>
+                        <label>
+                            <input type="checkbox" name="toppings" value="chicken"> Grilled Chicken
+                        </label>
+                        <label>
+                            <input type="checkbox" name="toppings" value="tandoori_chicken"> Tandoori Chicken
+                        </label>
+                        <label>
+                            <input type="checkbox" name="toppings" value="feta_cheese"> Feta Cheese
+                        </label>
+                        <label>
+                            <input type="checkbox" name="toppings" value="halal_ham"> Halal Ham
+                        </label>
+                        <label>
+                            <input type="checkbox" name="toppings" value="bbq_sauce"> BBQ Sauce
+                        </label>
+                        <label>
+                            <input type="checkbox" name="toppings" value="pineapple"> Pineapple
+                        </label>
+                        <label>
+                            <input type="checkbox" name="toppings" value="ground_lamb"> Ground Lamb
+                        </label>
+                    </fieldset>
+                
+                    <button type="submit">Submit Order</button>
+                </form>
+            </div>
+
+
+        <section>
+            <h2>Our Signature Pizzas</h2>
+        </section>
+        
+        <!-- Pizza Menu Section -->
+        <section class="menu">
+            <div class="pizza-item">
+                <h3>Margherita</h3>
+                <p>A classic pizza featuring a thin crust topped with rich tomato sauce, fresh mozzarella cheese, and fragrant basil leaves. Simple yet flavorful, it's a timeless favorite</p>
+                <p class="price">$12.00</p>
+            </div>
+            <div class="pizza-item">
+                <h3>Chicken Tikka Pizza</h3>
+                <p>A delicious fusion of Indian flavors, this pizza is topped with tender pieces of chicken marinated in tikka spices, red onions, and drizzled with a creamy sauce, all on a cheesy base.</p>
+                <p class="price">$18.00</p>
+            </div>
+            <div class="pizza-item">
+                <h3>Beef Pepperoni Pizza</h3>
+                <p>A halal twist on a traditional favorite, this pizza is loaded with savory beef pepperoni slices, melted cheese, and a zesty tomato sauce, perfect for pepperoni lovers.</p>
+                <p class="price">$15.00</p>
+            </div>
+            <div class="pizza-item">
+                <h3>Vegetable Supreme Pizza</h3>
+                <p>A colorful medley of fresh vegetables including bell peppers, onions, mushrooms, olives, and spinach, all piled on a cheesy base and finished with a drizzle of olive oil.</p>
+                <p class="price">$10.00</p>
+            </div>
+            <div class="pizza-item">
+                <h3>BBQ Chicken Pizza</h3>
+                <p>Topped with grilled chicken, tangy BBQ sauce, red onions, and cilantro, this pizza offers a smoky flavor that's both sweet and savory, making it a crowd-pleaser.</p>
+                <p class="price">$19.00</p>
+            </div>
+            <div class="pizza-item">
+                <h3>Hawaiian Pizza (with Halal Ham)</h3>
+                <p>A sweet and savory combination of halal ham and pineapple chunks on a cheesy base, this pizza is loved for its unique blend of flavors.</p>
+                <p class="price">$14.00</p>
+            </div>
+            <div class="pizza-item">
+                <h3>Lamb Gyro Pizza</h3>
+                <p>Inspired by Mediterranean cuisine, this pizza features seasoned ground lamb, fresh tomatoes, red onions, and tzatziki sauce, all on a delicious cheese base.</p>
+                <p class="price">$16.00</p>
+            </div>
+            <div class="pizza-item">
+                <h3>Spinach and Feta Pizza</h3>
+                <p>A healthy option loaded with fresh spinach, crumbled feta cheese, and garlic, this pizza is light yet flavorful, perfect for those looking for something a little different.</p>
+                <p class="price">$15.00</p>
+            </div>
+            <div class="pizza-item">
+                <h3>Tandoori Chicken Pizza</h3>
+                <p>A spicy and flavorful option, this pizza is topped with marinated tandoori chicken, red onions, and a sprinkle of cilantro, bringing a taste of Indian cuisine to your plate.</p>
+                <p class="price">$18.00</p>
+            </div>
+            <div class="pizza-item">
+                <h3>Four Cheese Pizza</h3>
+                <p>A cheesy delight, this pizza combines mozzarella, cheddar, parmesan, and gorgonzola for a rich and creamy flavor, perfect for cheese lovers.</p>
+                <p class="price">$14.00</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="social-media">
+                <h3>Follow us</h3>
+                <img src="./img/Socials.png" alt="Social Media Links" class="social-img">
+            </div>
+            <div class="footer-links">
+                <h3>Links</h3>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+            <div class="contact-info">
+                <h3>Contact Us</h3>
+                <p>Email: 200451484@student.georgianc.on.ca</p>
+                <p>Phone: (123) 456-7890</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>2024 Pizza Shop. All Rights Reserved.</p>
+        </div>
+    </footer>
+    
+</body>
+</html>
