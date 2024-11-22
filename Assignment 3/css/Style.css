@@ -1,0 +1,72 @@
+body {
+    font-family: 'Times New Roman', Times, serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    height: 100vh; 
+    padding-top: 50px; 
+    background-image: url("../img/hp.jpg");
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: 50vw 100vh;
+    background-color: black;
+    overflow: hidden;
+
+    
+    
+}
+.header {
+    text-align: center;
+}
+
+.top p {
+    font-style: italic;
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: #5f8ff7;
+    text-align: center;
+
+
+}
+
+
+.movie-title h1 {
+    font-family: 'Harry Potter', sans-serif;
+    font-size: 3rem;
+    text-align: center;
+    color: #ffd342;
+    margin-top: 50%;
+}
+
+.movie-title h2 {
+    font-size: 1rem;
+    text-indent: 25%;
+    text-align:center;
+    color: #ffd342;
+    text-transform: uppercase;
+
+}
+.credits{
+    margin-bottom: 20%;
+    text-align: center;
+}
+
+.credits p {
+    display: flex;
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 15px;;
+    margin: 5px 0;
+    color: #9e7c0d;
+    text-align: center;
+   
+
+}
+.credits small {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 12px;;
+    margin: 5px 0;
+    color: #9e7c0d;
+    text-align: center;
+}
